@@ -1,0 +1,15 @@
+.feedbacky__container {
+    right: 12px;
+    bottom: 12px;
+}
+
+.feedbacky__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    color: orange;
+    font-size: 40px;
+}
