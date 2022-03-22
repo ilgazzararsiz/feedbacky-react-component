@@ -14,11 +14,13 @@ export const Feedbacky = (props) => {
     }
 
     return (
-        <div className="feedbacky__container">
-            {isVisible && (<button className="feedbacky__button" type="button" onClick={handleButtonClick}>
-                <ChatOutlinedIcon sx={{fontSize: 40}}/>
-            </button>)}
+        <>
+            <div className="feedbacky__container">
+                {isVisible && (<button className="feedbacky__button" type="button" onClick={handleButtonClick}>
+                    <ChatOutlinedIcon sx={{fontSize: 40}}/>
+                </button>)}
+            </div>
             {isModalOpen && <FeedbackyModal handleClose={handleButtonClick}/>}
-        </div>
+        </>
     )
 }

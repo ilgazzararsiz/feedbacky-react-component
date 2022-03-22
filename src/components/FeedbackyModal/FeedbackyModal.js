@@ -16,24 +16,36 @@ export const FeedbackyModal = (props) => {
 
     console.log(props)
     return (
-        <div className="feedbacky__modal">
-            <button className="close__button" onClick={handleButtonClose}>
-                <CloseOutlinedIcon/>
-            </button>
-            <div>
-                <h1>SEND YOUR FEEDBACK</h1>
-                {!isShowResponse ? (
-                    <form onSubmit={handleFormSubmit}>
-                        <div>
-                            <label>
-                                <textarea/>
-                            </label>
+        <div className="feedbacky__popup">
+            <div className="feedbacky__popup-modal">
+                <div className="feedbacky__modal">
+                    <div className="feedbacky__modal-content">
+                        <div className="close__button">
+                            <button onClick={handleButtonClose}>
+                                <CloseOutlinedIcon/>
+                            </button>
                         </div>
-                        <button className="send__button" type="submit">SEND</button>
-                    </form>
-                ) : (<div>
-                    <h1>WE'VE GOT YOUR FEEDBACK</h1>
-                </div>)}
+                        <div className="form__popup">
+                            {!isShowResponse ? (
+                                <>
+                                    <div className="form__title">
+                                        <h1>SEND YOUR FEEDBACK</h1>
+                                    </div>
+                                    <form className="form" onSubmit={handleFormSubmit}>
+                                        <div>
+                                            <label>
+                                                <textarea className="textarea"/>
+                                            </label>
+                                        </div>
+                                        <button className="send__button" type="submit">SEND</button>
+                                    </form>
+                                </>
+                            ) : (<div className="response__title">
+                                <h1>WE'VE GOT <br/>YOUR FEEDBACK</h1>
+                            </div>)}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
