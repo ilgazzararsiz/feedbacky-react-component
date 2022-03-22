@@ -35,7 +35,6 @@ button {
 .feedbacky__modal-content {
     position: relative;
     display: flex;
-    background-color: aqua;
 }
 
 .close__button {
