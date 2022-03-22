@@ -6,16 +6,18 @@ import './Feedbacky.css'
 
 export const Feedbacky = (props) => {
     const [isModalOpen, setModalIsOpen] = useState(false)
+    const [isVisible, setIsVisible] = useState(true)
 
     const handleButtonClick = () => {
         setModalIsOpen(!isModalOpen)
+        setIsVisible(!isVisible)
     }
 
     return (
         <div className="feedbacky__container">
-            <button className="feedbacky__button" type="button" onClick={handleButtonClick}>
+            {isVisible && (<button className="feedbacky__button" type="button" onClick={handleButtonClick}>
                 <ChatOutlinedIcon sx={{fontSize: 40}}/>
-            </button>
+            </button>)}
             {isModalOpen && <FeedbackyModal handleClose={handleButtonClick}/>}
         </div>
     )

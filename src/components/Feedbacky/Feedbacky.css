@@ -4,12 +4,17 @@
 }
 
 .feedbacky__button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    backface-visibility: hidden;
+    border: 1px solid #dcdcdc;
+    border-bottom-width: 2px;
+    bottom: 5px;
+    position: fixed;
+    right: 20px;
+    width: 40px;
     border: none;
-    border-radius: 15px;
     background-color: transparent;
     color: orange;
-    font-size: 40px;
+    line-height: 42px;
+    z-index: 1000;
+    position: fixed;
 }
