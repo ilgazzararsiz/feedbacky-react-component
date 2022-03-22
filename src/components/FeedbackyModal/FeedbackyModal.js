@@ -24,9 +24,10 @@ export const FeedbackyModal = (props) => {
         event.preventDefault()
         setDisableButton(true)
         if (feedbackContent.length >= 3) {
+            let applicationId = props.applicationId
             try {
                 const response = await feedback.update({
-                    feedbackContent
+                    feedbackContent, applicationId
                 })
                 if (response.status === StatusCodes.CREATED) {
                     setIsShowResponse(true)
@@ -48,11 +49,11 @@ export const FeedbackyModal = (props) => {
                                 <CloseOutlinedIcon/>
                             </button>
                         </div>
-                        <div className="form__popup">
+                        <div className="form__popup" style={{background: props.modalBackgroundColor}}>
                             {!isShowResponse ? (
                                 <>
                                     <div className="form__title">
-                                        <h1>SEND YOUR FEEDBACK</h1>
+                                        <h1>{props.formTitle}</h1>
                                     </div>
                                     <form className="form" onSubmit={handleFormSubmit}>
                                         <div>
@@ -67,11 +68,11 @@ export const FeedbackyModal = (props) => {
                                                     maxLength={2000}/>
                                             </label>
                                         </div>
-                                        <button className="send__button" type="submit" disabled={disableButton}>SEND</button>
+                                        <button className="send__button" type="submit" disabled={disableButton} style={{background: props.formButtonColor, color: props.formButtonTextColor}}>{props.formButtonText}</button>
                                     </form>
                                 </>
                             ) : (<div className="response__title">
-                                <h1>WE'VE GOT <br/>YOUR FEEDBACK</h1>
+                                <h1>{props.responseTitle}</h1>
                             </div>)}
                         </div>
                     </div>
