@@ -15,7 +15,7 @@ const props = {
     formButtonTextColor: "black",
     modalBackgroundColor: "white",
     formTitle: "SEND YOUR FEEDBACK",
-    responseTitle: "WE'VE GOT YOUR FEEDBACK",
+    responseTitle: "WE HAVE GOT YOUR FEEDBACK",
     responseTitleColor: "green"
 }
 
