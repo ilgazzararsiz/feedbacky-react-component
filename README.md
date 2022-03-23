@@ -5,7 +5,7 @@ Feedbacky is a react component library that can be used for collecting feedback 
 ## To Implement Feedbacky
 
 ```shell
-npm install feedbacky-react-lib
+npm i feedbacky-lib-react
 ```
 
 ## To Import Feedbacky As Default
