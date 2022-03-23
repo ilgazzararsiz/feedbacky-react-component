@@ -12,11 +12,11 @@ const props = {
     fontColor: "#fff",
     formButtonText: "SEND",
     formButtonColor: "#f37919",
-    formButtonTextColor: "black",
-    modalBackgroundColor: "white",
+    formButtonTextColor: "#000000",
+    modalBackgroundColor: "#ffffff",
     formTitle: "SEND YOUR FEEDBACK",
     responseTitle: "WE HAVE GOT YOUR FEEDBACK",
-    responseTitleColor: "green"
+    responseTitleColor: "#1d851d"
 }
 
 stories.add('App', () => {
