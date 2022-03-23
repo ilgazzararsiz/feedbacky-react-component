@@ -5,13 +5,13 @@ Feedbacky is a react component library that can be used for collecting feedback 
 ## To Implement Feedbacky
 
 ```shell
-npm i feedbacky-lib-react
+npm i react-lib-feedbacky
 ```
 
 ## To Import Feedbacky As Default
 
 ```javascript
-import { Feedbacky } from "react-feedbacky";
+import { Feedbacky } from "react-lib-feedbacky";
 export default function App() {
   const props = {
       applicationId: "TEST",
