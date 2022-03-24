@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import {FeedbackyModal} from '../FeedbackyModal'
+import feedbackButton from "../../assets/images/feedbacky.png";
 import * as PropTypes from "prop-types";
 
 
@@ -18,9 +18,11 @@ export const Feedbacky = (props) => {
     return (
         <>
             <div className="feedbacky__container">
-                {isVisible && (<button className="feedbacky__button" type="button" onClick={handleButtonClick} style={{color: props.buttonColor}}>
-                    <ChatOutlinedIcon sx={{fontSize: 40}}/>
-                </button>)}
+                {isVisible && (
+                    <button type="button" onClick={handleButtonClick}>
+                            <img className="feedbacky__button" src={feedbackButton}/>
+                    </button>
+                )}
             </div>
             {isModalOpen && <FeedbackyModal handleClose={handleButtonClick} {...props}/>}
         </>
@@ -29,7 +31,6 @@ export const Feedbacky = (props) => {
 
 Feedbacky.propTypes = {
     applicationId: PropTypes.string,
-    buttonColor: PropTypes.string,
     fontColor: PropTypes.string,
     formButtonText: PropTypes.string,
     formButtonColor: PropTypes.string,
@@ -42,7 +43,6 @@ Feedbacky.propTypes = {
 
 Feedbacky.defaultProps = {
     applicationId: "TEST",
-    buttonColor: "#f37919",
     fontColor: "#fff",
     formButtonText: "SEND",
     formButtonColor: "#f37919",

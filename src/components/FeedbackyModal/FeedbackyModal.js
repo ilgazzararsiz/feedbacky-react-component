@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from "axios";
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import closeButton from '../../assets/images/close.png'
 import {StatusCodes} from "http-status-codes";
 import {feedback} from '../../services/service'
 
@@ -46,7 +46,7 @@ export const FeedbackyModal = (props) => {
                     <div className="feedbacky__modal-content">
                         <div className="close__button">
                             <button onClick={handleButtonClose}>
-                                <CloseOutlinedIcon/>
+                                <img src={closeButton} className="close__button-image"/>
                             </button>
                         </div>
                         <div className="form__popup" style={{background: props.modalBackgroundColor}}>
@@ -68,7 +68,10 @@ export const FeedbackyModal = (props) => {
                                                     maxLength={2000}/>
                                             </label>
                                         </div>
-                                        <button className="send__button" type="submit" disabled={disableButton} style={{background: props.formButtonColor, color: props.formButtonTextColor}}>{props.formButtonText}</button>
+                                        <button className="send__button" type="submit" disabled={disableButton} style={{
+                                            background: props.formButtonColor,
+                                            color: props.formButtonTextColor
+                                        }}>{props.formButtonText}</button>
                                     </form>
                                 </>
                             ) : (<div className="response__title">

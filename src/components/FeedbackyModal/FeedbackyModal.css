@@ -41,13 +41,18 @@ button {
     z-index: 1;
     top: 17px;
     right: 15px;
-    font-size: 20px;
-    line-height: 20px;
     position: absolute;
     color: #666;
     cursor: pointer;
     align-self: flex-end;
     border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.close__button-image {
+    width: 30px;
+    height: 30px;
 }
 
 .form__popup {

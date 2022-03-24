@@ -36,7 +36,7 @@ export default function App() {
 
 ## Documentation
 
-| Props                | Description |
+| Props*               | Description |
 |----------------------| ----------- |
 | applicationId        | Application ID or name where feedbacks come from
 | buttonColor          | Feedbacky button color style
@@ -51,19 +51,3 @@ export default function App() {
 
 *all props are default as string.
 
-
-## To Run Feedbacky Locally on Storybook
-
-```shell
-git clone
-```
-
-```shell
-npm i
-```
-
-```shell
-npm run storybook
-```
-
-Then Feedbacky start as default port 6006

@@ -8,7 +8,6 @@ axios.default.baseURL = process.env.REACT_APP_API_URL
 const stories = storiesOf('App Test', module);
 const props = {
     applicationId: "TEST",
-    buttonColor: "#f37919",
     fontColor: "#fff",
     formButtonText: "SEND",
     formButtonColor: "#f37919",
