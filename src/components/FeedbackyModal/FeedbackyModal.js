@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import axios from "axios";
 import closeButton from '../../assets/images/close.png'
 import {feedback} from '../../services/service'
 
