@@ -6,7 +6,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import images from 'rollup-plugin-image-files';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
-import { terser } from 'rollup-plugin-terser';
+import {terser} from 'rollup-plugin-terser';
+import replace from 'rollup-plugin-replace';
 
 import postcss from 'rollup-plugin-postcss';
 
@@ -29,7 +30,7 @@ export default [
                 plugins: [],
                 minimize: true,
             }),
-            rollupNodeResolve({ jsnext: true, preferBuiltins: true, browser: true }),
+            rollupNodeResolve({jsnext: true, preferBuiltins: true, browser: true}),
             rollupJson(),
             babel({
                 exclude: 'node_modules/**',
@@ -40,7 +41,10 @@ export default [
             resolve(),
             terser(),
             images(),
-            nodePolyfills()
+            nodePolyfills(),
+            replace({
+                'process.env.NODE_ENV': JSON.stringify('production')
+            })
         ]
     }
 ];
