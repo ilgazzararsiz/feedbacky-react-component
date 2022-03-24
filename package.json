@@ -1,6 +1,6 @@
 {
   "name": "react-lib-feedbacky",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -67,7 +67,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
-    "resolutions": {
+  "resolutions": {
     "@mui/utils": "5.1.1",
     "@mui/material": "5.1.1"
   }
