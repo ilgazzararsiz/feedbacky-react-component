@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import rollupJson from "rollup-plugin-json";
-import rollupNodeResolve from "@rollup/plugin-node-resolve";
+import {nodeResolve} from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import images from 'rollup-plugin-image-files';
@@ -26,11 +26,15 @@ export default [
             }
         ],
         plugins: [
+            replace({
+                'process.env.NODE_ENV': JSON.stringify('production')
+            }),
+            resolve({jsnext: true, main: true, browser: true}),
             postcss({
                 plugins: [],
                 minimize: true,
             }),
-            rollupNodeResolve({jsnext: true, preferBuiltins: true, browser: true}),
+            nodeResolve({jsnext: true, preferBuiltins: true, browser: true}),
             rollupJson(),
             babel({
                 exclude: 'node_modules/**',
@@ -38,13 +42,9 @@ export default [
             }),
             commonjs(),
             external(),
-            resolve(),
             terser(),
             images(),
-            nodePolyfills(),
-            replace({
-                'process.env.NODE_ENV': JSON.stringify('production')
-            })
+            nodePolyfills()
         ]
     }
 ];
