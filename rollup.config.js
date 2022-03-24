@@ -35,7 +35,7 @@ export default [
                 minimize: true,
             }),
             nodeResolve({jsnext: true, preferBuiltins: true, browser: true}),
-            rollupJson(),
+            rollupJson({compact: true}),
             babel({
                 exclude: 'node_modules/**',
                 presets: ['@babel/preset-react']
