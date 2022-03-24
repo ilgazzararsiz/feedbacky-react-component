@@ -1,9 +1,6 @@
 import React from 'react'
-import axios from "axios";
-import { storiesOf } from '@storybook/react'
-import { Feedbacky } from '../components/Feedbacky'
-
-axios.default.baseURL = process.env.REACT_APP_API_URL
+import {storiesOf} from '@storybook/react'
+import {Feedbacky} from '../components/Feedbacky'
 
 const stories = storiesOf('App Test', module);
 const props = {
@@ -20,7 +17,7 @@ const props = {
 }
 
 stories.add('App', () => {
-    return(
+    return (
         <Feedbacky {...props}/>
     )
 })
