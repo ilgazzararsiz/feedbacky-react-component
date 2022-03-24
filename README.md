@@ -50,3 +50,20 @@ export default function App() {
 | responseTitleColor   | Color for response title
 
 *all props are default as string.
+
+
+## To Run Feedbacky Locally on Storybook
+
+```shell
+git clone
+```
+
+```shell
+npm i
+```
+
+```shell
+npm run storybook
+```
+
+Then Feedbacky start as default port 6006
