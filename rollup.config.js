@@ -4,6 +4,8 @@ import rollupJson from "rollup-plugin-json";
 import rollupNodeResolve from "@rollup/plugin-node-resolve";
 import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
+import images from 'rollup-plugin-image-files';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 import { terser } from 'rollup-plugin-terser';
 
 import postcss from 'rollup-plugin-postcss';
@@ -37,6 +39,8 @@ export default [
             external(),
             resolve(),
             terser(),
+            images(),
+            nodePolyfills()
         ]
     }
 ];

@@ -1,11 +1,9 @@
 import React, {useState} from 'react'
 import axios from "axios";
 import closeButton from '../../assets/images/close.png'
-import {StatusCodes} from "http-status-codes";
 import {feedback} from '../../services/service'
 
 import './FeedbackyModal.css'
-import * as http from "http";
 
 export const FeedbackyModal = (props) => {
     const [isShowResponse, setIsShowResponse] = useState(false)
@@ -25,11 +23,14 @@ export const FeedbackyModal = (props) => {
         setDisableButton(true)
         if (feedbackContent.length >= 3) {
             let applicationId = props.applicationId
+            let baseUrl = props.feedbackyApiUrl
             try {
                 const response = await feedback.update({
-                    feedbackContent, applicationId
+                    baseUrl,
+                    feedbackContent,
+                    applicationId
                 })
-                if (response.status === StatusCodes.CREATED) {
+                if (response.status === 201) {
                     setIsShowResponse(true)
                     setDisableButton(false)
                 }

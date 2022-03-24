@@ -39,6 +39,7 @@ Feedbacky.propTypes = {
     formTitle: PropTypes.string,
     responseTitle: PropTypes.string,
     responseTitleColor: PropTypes.string,
+    feedbackyApiUrl: PropTypes.string
 }
 
 Feedbacky.defaultProps = {
@@ -50,5 +51,6 @@ Feedbacky.defaultProps = {
     modalBackgroundColor: "#ffffff",
     formTitle: "SEND YOUR FEEDBACK",
     responseTitle: "WE HAVE GOT YOUR FEEDBACK",
-    responseTitleColor: "#1d851d"
+    responseTitleColor: "#1d851d",
+    feedbackyApiUrl: "https://feedbacky-api-go.herokuapp.com/feedback",
 }

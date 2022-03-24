@@ -15,7 +15,8 @@ const props = {
     modalBackgroundColor: "#ffffff",
     formTitle: "SEND YOUR FEEDBACK",
     responseTitle: "WE HAVE GOT YOUR FEEDBACK",
-    responseTitleColor: "#1d851d"
+    responseTitleColor: "#1d851d",
+    feedbackyApiUrl: "https://feedbacky-api-go.herokuapp.com/feedback",
 }
 
 stories.add('App', () => {

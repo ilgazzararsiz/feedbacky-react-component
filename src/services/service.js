@@ -1,11 +1,9 @@
-import axios from "./axios";
-
-const baseUrl = process.env.REACT_APP_API_URL
+import axios from 'axios';
 
 export const feedback = {
     update: async (value) => {
         try {
-            const res = await axios.post('feedback', {
+            const res = await axios.post(value.baseUrl, {
                 content: value.feedbackContent,
                 applicationId: value.applicationId
             })
@@ -13,5 +11,5 @@ export const feedback = {
         } catch (err) {
             return Promise.reject(err)
         }
-    }, create: {}
+    }
 }
